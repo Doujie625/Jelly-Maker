@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_06_161855) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_06_213401) do
   create_table "paths", force: :cascade do |t|
     t.string "id_element"
     t.string "class_element"
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_161855) do
     t.float "opacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   add_foreign_key "paths", "sprites"
