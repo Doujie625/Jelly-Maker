@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fill: MyString
+  fill_opacity: MyString
+  stroke: MyString
+  stroke_fill: 1.5
+  stroke_width: 1.5
+  opacity: 1.5
+
+two:
+  fill: MyString
+  fill_opacity: MyString
+  stroke: MyString
+  stroke_fill: 1.5
+  stroke_width: 1.5
+  opacity: 1.5

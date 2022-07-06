@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_05_230058) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_06_161855) do
   create_table "paths", force: :cascade do |t|
     t.string "id_element"
     t.string "class_element"
@@ -29,6 +29,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_230058) do
     t.float "width"
     t.float "height"
     t.string "viewbox"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "fill"
+    t.string "fill_opacity"
+    t.string "stroke"
+    t.float "stroke_fill"
+    t.float "stroke_width"
+    t.float "opacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

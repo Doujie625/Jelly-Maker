@@ -1,0 +1,47 @@
+<%= form_with(model: style) do |form| %>
+  <% if style.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(style.errors.count, "error") %> prohibited this style from being saved:</h2>
+
+      <ul>
+        <% style.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :fill, class:"form-control", placeholder: "Fill" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :fill_opacity, class:"form-control", placeholder: "Fill Opacity" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :stroke, class:"form-control", placeholder: "Stroke" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :stroke_fill, class:"form-control", placeholder: "Stroke Fill" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :stroke_width, class:"form-control", placeholder: "Stroke Width" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :opacity, class:"form-control", placeholder: "Opacity" %>
+  </div>
+  <br/>
+
+  <div>
+  <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

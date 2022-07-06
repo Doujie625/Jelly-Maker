@@ -1,0 +1,51 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Styles</h1>
+
+<table class="table table-striped table-hover">
+  <thead class="table-secondary">
+    <th>Fill</th>
+    <th>Fill Opacity</th>
+    <th>Stroke</th>
+    <th>Stroke Fill</th>  
+    <th>Stroke Width</th>
+    <th>Opacity</th>
+    <th colspan='3'> </th>
+  </thead>
+
+  <tbody id="styles">
+    <% @styles.each do |style| %>
+        <tr>
+          <td>
+            <%= style.fill%>
+          </td>
+          <td>
+            <%= style.fill_opacity%>
+          </td>
+          <td>
+            <%= style.stroke%>
+          </td>
+          <td>
+            <%= style.stroke_fill%>
+          </td>
+          <td>
+            <%= style.stroke_width%>
+          </td>
+          <td>
+            <%= style.opacity%>
+          </td>
+          <td>
+            <%= link_to 'Show', style, class: "btn btn-secondary" %>
+          </td>
+          <td>
+            <%= link_to 'Edit', edit_style_path(style), class: "btn btn-dark" %>
+          </td>
+          <td>
+            <%= link_to 'Destroy', style, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+
+    <% end %>
+  </table>
+
+<%= link_to "New style", new_style_path, class: "btn btn-secondary"%>
