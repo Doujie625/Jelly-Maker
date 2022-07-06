@@ -1,0 +1,32 @@
+<%= form_with(model: [@sprite, path], local: true) do |form| %>
+  <% if path.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(path.errors.count, "error") %> prohibited this path from being saved:</h2>
+
+      <ul>
+        <% path.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :id_element, class:"form-control", placeholder: "ID" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :class_element, class:"form-control", placeholder: "Class" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :d_element, class:"form-control", placeholder: "D" %>
+  </div>
+  <br/>
+
+  <div>
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

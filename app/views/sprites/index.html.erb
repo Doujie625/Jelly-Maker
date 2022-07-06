@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sprites</h1>
+
+<table class="table table-striped table-hover">
+  <thead class="table-secondary">
+    <th>Name</th>
+    <th>Frame</th>
+    <th>Row</th>
+    <th>Column</th>  
+    <th>Height</th>
+    <th>Width</th>
+    <th>Viewbox</th>
+    <th>Paths</th>
+    <th colspan='3'> </th>
+  </thead>
+
+  <tbody id="sprites">
+    <% @sprites.each do |sprite| %>
+        <tr>
+          <td>
+            <%= sprite.name%>
+          </td>
+          <td>
+            <%= sprite.frame%>
+          </td>
+          <td>
+            <%= sprite.row%>
+          </td>
+          <td>
+            <%= sprite.column%>
+          </td>
+          <td>
+            <%= sprite.height%>
+          </td>
+          <td>
+            <%= sprite.width%>
+          </td>
+          <td>
+            <%= sprite.viewbox%>
+          </td>
+          <td>
+            <%= link_to 'Show', sprite, class: "btn btn-secondary" %>
+          </td>
+          <td>
+            <%= link_to 'Edit', edit_sprite_path(sprite), class: "btn btn-dark" %>
+          </td>
+          <td>
+            <%= link_to 'Destroy', sprite, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+
+    <% end %>
+  </table>
+
+<%= link_to "New sprite", new_sprite_path, class: "btn btn-secondary"%>

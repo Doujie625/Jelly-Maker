@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Paths</h1>
+
+<table class="table table-striped table-hover">
+  <thead class="table-secondary">
+    <tr>
+      <th>Id</th>
+      <th>Class</th>
+      <th>D</th>
+      <th>Sprite</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paths.each do |path| %>
+      <tr>
+        <td><%= path.id_element %></td>
+        <td><%= path.class_element %></td>
+        <td><%= path.d_element %></td>
+        <td><%= path.sprite.name %></td>
+        <td><%= link_to 'Show Sprite', [@sprite], class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Edit Path', edit_sprite_path_path(@sprite, path), class: "btn btn-dark" %></td>
+        <td><%= button_to 'Destroy Path', [@sprite, path], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Path', new_sprite_path_path(@sprite), class: "btn btn-secondary" %>

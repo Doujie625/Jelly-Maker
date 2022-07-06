@@ -1,0 +1,12 @@
+<h1>Editing path</h1>
+
+<%= render "form", path: @path %>
+
+<br>
+
+<div class="btn-toolbar">
+  <div class="btn-group me-2">
+    <%= link_to "Show", [@sprite, @path], class:"btn btn-secondary" %>
+    <%= link_to "Back", sprite_paths_path(@sprite), class:"btn btn-dark" %>
+  </div>
+</div>
