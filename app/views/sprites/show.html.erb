@@ -18,6 +18,7 @@
         <td><%= path.id_element %></td>
         <td><%= path.class_element %></td>
         <td><%= path.d_element %></td>
+        <td><%= link_to "Show Path", [@sprite, @path, path], class:"btn btn-secondary" %></td>
         <td><%= link_to 'Edit Path', edit_sprite_path_path(@sprite, path), class: "btn btn-dark" %></td>
         <td><%= button_to 'Destroy Path', [@sprite, path], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
