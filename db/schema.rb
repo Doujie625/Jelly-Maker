@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_06_213401) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_18_182818) do
   create_table "paths", force: :cascade do |t|
     t.string "id_element"
     t.string "class_element"
@@ -19,6 +19,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_213401) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sprite_id"], name: "index_paths_on_sprite_id"
+  end
+
+  create_table "sheets", force: :cascade do |t|
+    t.string "sheet_name"
+    t.integer "frames"
+    t.integer "rows"
+    t.integer "columns"
+    t.integer "reel_width"
+    t.integer "reel_height"
+    t.string "sheet_size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sprites", force: :cascade do |t|
@@ -31,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_213401) do
     t.string "viewbox"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sheet_id"
+    t.index ["sheet_id"], name: "index_sprites_on_sheet_id"
   end
 
   create_table "styles", force: :cascade do |t|

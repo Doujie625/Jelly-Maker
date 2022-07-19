@@ -54,7 +54,7 @@ I will need to familiar myself with Ruby on Rails prior to the development of my
 
 #### Sheet
 
-This model will hold the data for the entire sheet, including the name of teh sheet as well as the various 'frames' and 'sets' that make up that sheet. This model will also contain the size of the sheet and will change as more rows and columns are added to the sheet.
+This model will hold the data for the entire sheet, including the name of the sheet as well as the various 'frames' and 'sets' that make up that sheet. This model will also contain the size of the sheet and will change as more rows and columns are added to the sheet.
 
 #### Columns and Rows
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sheets
   resources :styles
   resources :sprites do
     resources :paths

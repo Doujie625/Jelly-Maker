@@ -1,0 +1,53 @@
+<%= form_with(model: sheet) do |form| %>
+  <% if sheet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(sheet.errors.count, "error") %> prohibited this sheet from being saved:</h2>
+
+      <ul>
+        <% sheet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field form-group">
+    <%= form.text_field :sheet_name, class:"form-control", placeholder: "Name" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :frames, class:"form-control", placeholder: "Frames" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :rows, class:"form-control", placeholder: "Rows" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :columns, class:"form-control", placeholder: "Columns" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :reel_width, class:"form-control", placeholder: "Reel Width" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :reel_height, class:"form-control", placeholder: "Reel Height" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :sheet_size, class:"form-control", placeholder: "Sheet Size" %>
+  </div>
+  <br/>
+
+  <div>
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>
