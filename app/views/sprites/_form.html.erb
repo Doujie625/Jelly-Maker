@@ -1,0 +1,57 @@
+<%= form_with(model: sprite) do |form| %>
+  <% if sprite.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(sprite.errors.count, "error") %> prohibited this sprite from being saved:</h2>
+
+      <ul>
+        <% sprite.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :name, class:"form-control", placeholder: "Name" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :frame, class:"form-control", placeholder: "Frame" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :row, class:"form-control", placeholder: "Row" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :column, class:"form-control", placeholder: "Column" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :width, class:"form-control", placeholder: "Width" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :height, class:"form-control", placeholder: "Height" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :viewbox, class:"form-control", placeholder: "Viewbox" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.number_field :sheet_id, id: :sprite_sheet_id, class:"form-control", placeholder: "Sheet" %>
+  </div>
+  <br/>
+
+  <div>
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>
